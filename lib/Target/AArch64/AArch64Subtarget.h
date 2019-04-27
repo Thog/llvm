@@ -134,6 +134,9 @@ protected:
   bool HasRandGen = false;
   bool HasMTE = false;
 
+  // If true, read thread pointer from __aarch64_read_tp.
+  bool ReadTpSoft = false;
+
   // HasZeroCycleRegMove - Has zero-cycle register mov instructions.
   bool HasZeroCycleRegMove = false;
 
@@ -372,6 +375,8 @@ public:
   bool hasBTI() const { return HasBTI; }
   bool hasRandGen() const { return HasRandGen; }
   bool hasMTE() const { return HasMTE; }
+
+  bool IsReadTPSoft() const { return ReadTpSoft; }
 
   bool isLittleEndian() const { return IsLittle; }
 

@@ -330,6 +330,10 @@ def FeatureRandGen : SubtargetFeature<"rand", "HasRandGen",
 def FeatureMTE : SubtargetFeature<"mte", "HasMTE",
     "true", "Enable Memory Tagging Extension" >;
 
+// The way of reading thread pointer
+def FeatureReadTp : SubtargetFeature<"read-tp-soft", "ReadTpSoft",
+    "true", "Read thread pointer from __aarch64_read_tp" >;
+
 //===----------------------------------------------------------------------===//
 // Architectures.
 //
